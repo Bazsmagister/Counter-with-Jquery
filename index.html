@@ -5,14 +5,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous">
+    </script> -->
+
+    <!-- Uncaught ReferenceError: $ is not defined? -->
+    <!-- You are calling the ready function before the jQuery JavaScript is included. Reference jQuery first. -->
+
+    <script src="https://code.jquery.com/jquery-2.2.4.js"
+        integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous">
+        </script>
 </head>
 
 <body>
 
+    <button id="increment">Increment+1</button>
+    <button id="decrement">Decrement-1</button>
+
+    <hr>
+    <div id="counter">a</div>
 
 
-    <script src="https://code.jquery.com/jquery-3.5.1.js"
-        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(
+            function () {
+                var count = 0;
+
+                $("#increment").click(function () {
+                    count++;
+                    $("#counter").html("My current count is: " + count);
+                })
+
+                $("#decrement").click(function () {
+                    count--;
+                    $("#counter").html("My current count is: " + count);
+
+                })
+            }
+        );
+
+        // $(document).ready(
+        //     function () {
+        //         var count = 0;
+
+        //         $("#decrement").click(function () {
+        //             count--;
+        //             $("#counter").html("My current count is: " + count);
+
+        //         })
+        //     }
+        // );
+    </script>
+
+
 </body>
 
 </html>

@@ -1,0 +1,6 @@
+ <script>
+         var counter = 0;
+         $("#increment").click(function () {
+             counter++;
+         });
+     </script>
